@@ -3,19 +3,27 @@
 echo "Username generator for Kerberos Pentesting"
 echo ""
 
-filename=$1
+userinput=$1
 
-readeachline() {
-	while read line; do
-		echo $line
-	done < $filename
-}
+if [ $# != 0 ]; then
 
-removespaces() {
-	while read line; do
-		echo $line | sed 's/ //g'
-	done < $filename
-}
+#	readeachline() {
+#		while read line; do
+#			echo $line
+#		done < $userinput
+#	}
 
-#readeachline
-removespaces
+	removespaces() {
+		while read line; do
+			echo $line | sed 's/ //g'
+		done < $userinput
+	}
+	
+	#readeachline
+	removespaces
+	
+else
+
+	echo "No arguments supplied"
+
+fi
