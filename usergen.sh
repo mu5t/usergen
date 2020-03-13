@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Deprecated!
+
 userinput=$1
 
 if [ $# != 0 ]; then
