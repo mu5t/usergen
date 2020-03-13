@@ -11,4 +11,11 @@ readeachline() {
 	done < $filename
 }
 
-readeachline
+removespaces() {
+	while read line; do
+		echo $line | sed 's/ //g'
+	done < $filename
+}
+
+#readeachline
+removespaces
